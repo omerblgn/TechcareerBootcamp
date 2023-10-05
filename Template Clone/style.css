@@ -1,0 +1,236 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Muli";
+    font-size: 1rem;
+    padding-left: 17rem;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid;
+    opacity: 0.25;
+}
+
+nav {
+    background-color: #bd5d38;
+    width: 17rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav a#avatar {
+    display: flex;
+    margin: auto auto 0.5rem;
+    padding: 0.5rem;
+}
+
+nav img {
+    border-radius: 50%;
+    border: 0.5rem solid #fff3;
+    max-width: 10rem;
+    max-height: 10rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: auto;
+    width: 100%;
+}
+
+nav li {
+    display: block;
+}
+
+nav li a {
+    text-transform: uppercase;
+    display: block;
+    text-decoration: none;
+    color: #ffffff8c;
+    font-weight: 800;
+    letter-spacing: 0.05rem;
+    padding: 0.5rem;
+}
+
+nav a:hover {
+    color: #ffffffbf;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    padding: 5rem 3rem;
+    min-height: 100vh;
+}
+
+section h2 {
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    font-size: 3.5rem;
+    font-family: "Saira Extra Condensed";
+    font-weight: 700;
+    line-height: 1.2;
+    color: #343a40;
+}
+
+section h3 {
+    text-transform: uppercase;
+    font-family: "Saira Extra Condensed";
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #343a40;
+}
+
+section .subheading {
+    text-transform: uppercase;
+    font-family: "Saira Extra Condensed";
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+section svg {
+    overflow: visible;
+    box-sizing: content-box;
+    height: 1em;
+    vertical-align: -0.125em;
+}
+
+#about h1 {
+    text-transform: uppercase;
+    font-family: "Saira Extra Condensed";
+    font-size: 6rem;
+    font-weight: 700;
+    color: #343a40;
+    line-height: 1;
+}
+
+#about h1 span {
+    color: #bd5d38;
+}
+
+#about .subheading {
+    margin-bottom: 3rem;
+}
+
+#about .subheading a {
+    color: #bd5d38;
+    text-decoration: underline;
+}
+
+#about p {
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+#about .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: #495057;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+#about .social-icon:hover {
+    background-color: #bd5d38;
+}
+
+#experience .job-desc {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+#experience .job-desc:last-child {
+    margin-bottom: 0;
+}
+
+#experience p {
+    margin-bottom: 1rem;
+}
+
+#experience .working-time {
+    flex-shrink: 0;
+}
+
+#experience .working-time span {
+    color: #bd5d38;
+}
+
+#education .edu-desc {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+#education .edu-desc:last-child {
+    margin-bottom: 0;
+}
+
+#education p {
+    margin-bottom: 1rem;
+}
+
+#education .edu-time {
+    flex-shrink: 0;
+}
+
+#education .edu-time span {
+    color: #bd5d38;
+}
+
+.prog-lang {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.prog-lang li {
+    margin-right: 0.5rem;
+    display: inline-block;
+}
+
+#awards ul {
+    margin-left: 2.5em;
+}
+
+#awards ul li {
+    position: relative;
+}
+
+#awards ul li span {
+    position: absolute;
+    text-align: center;
+    left: calc(2em * -1);
+}
+
+#awards ul li span svg {
+    color: #ffc107;
+}
+
+sup {
+    position: relative;
+    top: -0.5em;
+    font-size: 0.75em;
+    line-height: 0;
+    vertical-align: baseline;
+}
