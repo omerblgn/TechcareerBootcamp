@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <label>Name</label>
+    <input type="text" id="name">
+    <br>
+    <label>Unit Price</label>
+    <input type="text" id="unitPrice">
+    <br>
+    <label>Units In Stock</label>
+    <input type="text" id="unitsInStock">
+    <br>
+    <label>Category Id</label>
+    <input type="text" id="categoryId">
+    <br>
+    <button onclick="add()">Add</button>
+</body>
+
+<script>
+    function add() {
+        var name = document.getElementById("name").value;
+        var unitPrice = document.getElementById("unitPrice").value;
+        var unitsInStock = document.getElementById("unitsInStock").value;
+        var categoryId = document.getElementById("categoryId").value;
+
+        var product = {
+            name,
+            unitPrice,
+            unitsInStock,
+            categoryId
+        }
+
+        axios.post("https://northwind.vercel.app/api/products", product)
+            .then(res => console.log("Product addition was successful", res.data))
+    }
+</script>
+
+</html>
