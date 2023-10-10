@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    var count = 0;
+    fetch("https://northwind.vercel.app/api/orders")
+        .then(res => res.json())
+        .then(res => {
+            var orderUSA = res.filter(x => x.shipAddress.country == "USA")
+            console.log("Ülkesi USA olan " + orderUSA.length + " tane sipariş var");
+        });
+</script>
+
+</html>
