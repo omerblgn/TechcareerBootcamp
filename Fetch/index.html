@@ -1,0 +1,50 @@
+<!-- 1) Data kaynağı: https://northwind.vercel.app/api/suppliers
+
+** Company Name M harfi ile başlayan supplier ları console a yaz
+
+** Country Japan olan kaç Supplier var?
+
+** bir ul aç. Dışarıdan aldığın datayı FETCH ile içerisine doldur. Li içerisinde companyName yazacak -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    fetch("https://northwind.vercel.app/api/suppliers")
+        .then(res => res.json())
+        .then(res => {
+            var suppliers = res.filter(s => s.companyName.startsWith('M'));
+            console.log("Suppliers whose company name starts with the letter 'M':", suppliers);
+        });
+
+    fetch("https://northwind.vercel.app/api/suppliers")
+        .then(res => res.json())
+        .then(res => {
+            var suppliers = res.filter(s => s.address.country === "Japan");
+            console.log(suppliers.length + " suppliers whose country is Japan", suppliers);
+        });
+
+    fetch("https://northwind.vercel.app/api/suppliers")
+        .then(res => res.json())
+        .then(res => {
+            var ulElement = document.createElement("ul");
+            res.forEach(element => {
+                var liElement = document.createElement("li");
+                liElement.innerText = element.companyName;
+                ulElement.appendChild(liElement);
+            });
+            document.body.appendChild(ulElement);
+        });
+</script>
+
+</html>
