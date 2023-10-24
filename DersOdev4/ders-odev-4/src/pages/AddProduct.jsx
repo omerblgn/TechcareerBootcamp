@@ -7,14 +7,18 @@ function AddProduct() {
     const [unitsInStock, setunitsInStock] = useState();
 
     const add = () => {
-        let product = {
-            name,
-            unitPrice,
-            unitsInStock
-        }
+        if (name && unitPrice && unitsInStock) {
+            let product = {
+                name,
+                unitPrice,
+                unitsInStock
+            }
 
-        axios.post("https://northwind.vercel.app/api/products", product)
-            .then(res => console.log(res.data))
+            axios.post("https://northwind.vercel.app/api/products", product)
+                .then(res => console.log(res.data))
+        } else {
+            alert('Please fill in all the fields.');
+        }
     }
 
     return (
